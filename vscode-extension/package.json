@@ -1,0 +1,62 @@
+{
+  "name": "love-lang",
+  "displayName": "Love Language 💖",
+  "description": "Romantic programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:love",
+    "onCommand:love.run"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "love",
+        "aliases": [
+          "LoveLang",
+          "love"
+        ],
+        "extensions": [
+          ".love"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "love",
+        "scopeName": "source.love",
+        "path": "./syntaxes/love.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "love.run",
+        "title": "💖 Run LoveLang"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "love.run",
+          "when": "resourceExtname == .love",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/vscode": "^1.110.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10",
+    "vscode": "^1.1.36"
+  }
+}

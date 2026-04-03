@@ -1,0 +1,41 @@
+{
+  "scopeName": "source.love",
+  "patterns": [
+    {
+      "match": "\\b(promise)\\b",
+      "name": "keyword.function.love"
+    },
+    {
+      "match": "\\b(feel)\\b",
+      "name": "storage.type.variable.love"
+    },
+    {
+      "match": "\\b(say)\\b",
+      "name": "support.function.love"
+    },
+    {
+      "match": "\\b(ifLove|otherwise|forever)\\b",
+      "name": "keyword.control.love"
+    },
+    {
+      "match": "\".*?\"",
+      "name": "string.quoted.double.love"
+    },
+    {
+      "match": "\\b[0-9]+\\b",
+      "name": "constant.numeric.love"
+    },
+    {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.boolean.love"
+    },
+    {
+      "match": "\\+|\\-|\\*|\\/|==|>|<",
+      "name": "keyword.operator.love"
+    },
+    {
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+      "name": "variable.other.love"
+    }
+  ]
+}
